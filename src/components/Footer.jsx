@@ -9,8 +9,8 @@ const Footer = () => {
 
       <div className="relative z-10">
         {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 md:py-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 md:gap-16 mb-12 md:mb-16">
             {/* Brand Section */}
             <div>
               <div className="flex items-center gap-3 mb-8">
@@ -182,18 +182,18 @@ const Footer = () => {
           <div className="border-t border-amber-200 mb-8"></div>
 
           {/* Premium Newsletter */}
-          <div className="mb-12 bg-white border border-amber-200 p-12 rounded-2xl backdrop-blur shadow-sm">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="mb-8 sm:mb-12 bg-white border border-amber-200 p-6 sm:p-8 md:p-12 rounded-2xl backdrop-blur shadow-sm">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-black text-slate-900 mb-2">
+                <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-2">
                   EXCLUSIVE OFFERS
                 </h3>
-                <p className="text-slate-600 font-light tracking-wide">
+                <p className="text-sm sm:text-base text-slate-600 font-light tracking-wide">
                   Subscribe to receive premium villa offers and luxury travel
                   inspiration
                 </p>
               </div>
-              <form className="flex flex-col sm:flex-row gap-3">
+              <form className="flex flex-col gap-3">
                 <input
                   type="email"
                   placeholder="Your Elite Email"

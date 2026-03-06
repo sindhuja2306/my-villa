@@ -8,21 +8,21 @@ const Header = () => {
   return (
     <header className="fixed w-full top-0 z-50 bg-white/95 shadow-lg border-b border-amber-200 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-16 sm:h-20 md:h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-4 group">
-            <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-md transition-all duration-300 border border-amber-200">
+          <Link to="/" className="flex items-center gap-2 sm:gap-4 group">
+            <div className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 bg-white rounded-xl flex items-center justify-center shadow-md transition-all duration-300 border border-amber-200">
               <img
                 src={logo}
                 alt="My Villa logo"
-                className="w-10 h-10 object-contain"
+                className="w-8 sm:w-9 md:w-10 h-8 sm:h-9 md:h-10 object-contain"
               />
             </div>
-            <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-black bg-gradient-to-r from-amber-300 to-amber-500 bg-clip-text text-transparent leading-tight">
+            <div className="flex flex-col gap-0.5">
+              <span className="text-lg sm:text-xl md:text-2xl font-black bg-gradient-to-r from-amber-300 to-amber-500 bg-clip-text text-transparent leading-tight">
                 MY VILLA
               </span>
-              <span className="text-[10px] sm:text-xs text-amber-600 font-bold tracking-widest">
+              <span className="text-[8px] sm:text-[10px] md:text-xs text-amber-600 font-bold tracking-widest">
                 PREMIUM ESTATES
               </span>
             </div>
@@ -65,12 +65,12 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden pb-6 space-y-3 border-t border-amber-200 pt-4 mb-16 bg-white">
+          <div className="md:hidden pb-4 sm:pb-6 space-y-2 sm:space-y-3 border-t border-amber-200 pt-3 sm:pt-4 mb-14 sm:mb-16 bg-white">
             {["Home", "Villas", "Contact"].map((item, idx) => (
               <Link
                 key={idx}
                 to={item === "Home" ? "/" : `/#${item.toLowerCase()}`}
-                className="block px-4 py-3 text-slate-700 hover:bg-amber-100 rounded-lg font-semibold transition-colors"
+                className="block px-4 py-2 sm:py-3 text-sm sm:text-base text-slate-700 hover:bg-amber-100 rounded-lg font-semibold transition-colors"
               >
                 {item}
               </Link>

@@ -23,7 +23,7 @@ const VillaCard = ({ villa }) => {
     <Link to={`/villa/${villa.id}`} className="group h-full cursor-pointer">
       <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-amber-200 transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col border border-amber-200 hover:border-amber-400 backdrop-blur">
         {/* Premium Image Container */}
-        <div className="relative h-60 sm:h-80 overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
+        <div className="relative h-48 sm:h-60 md:h-80 overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
           <img
             src={villa.images[currentImageIndex]}
             alt={villa.name}
@@ -100,33 +100,33 @@ const VillaCard = ({ villa }) => {
         </div>
 
         {/* Premium Content */}
-        <div className="flex-grow p-4 sm:p-8 flex flex-col bg-white">
+        <div className="flex-grow p-4 sm:p-6 md:p-8 flex flex-col bg-white">
           {/* Location */}
-          <div className="flex items-center gap-2 mb-4">
-            <span className="text-2xl">📍</span>
-            <span className="text-amber-700 font-bold text-sm tracking-wide">
+          <div className="flex items-center gap-2 mb-3 sm:mb-4">
+            <span className="text-xl sm:text-2xl">📍</span>
+            <span className="text-amber-700 font-bold text-xs sm:text-sm tracking-wide truncate">
               {villa.location}
             </span>
           </div>
 
           {/* Villa Name */}
-          <h3 className="text-lg sm:text-2xl font-black text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
+          <h3 className="text-base sm:text-lg md:text-2xl font-black text-slate-900 mb-2 group-hover:text-amber-600 transition-colors line-clamp-2">
             {villa.name}
           </h3>
 
           {/* Price */}
-          <div className="mb-6 pb-6 border-b border-amber-600/30">
+          <div className="mb-4 sm:mb-6 pb-4 sm:pb-6 border-b border-amber-600/30">
             <p className="text-slate-500 text-xs mb-1 font-bold tracking-widest uppercase">
               Starting Price
             </p>
-            <p className="text-2xl sm:text-4xl font-black bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+            <p className="text-xl sm:text-2xl md:text-4xl font-black bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
               ₹{villa.price.toLocaleString()}
             </p>
           </div>
 
           {/* Amenities Grid */}
-          <div className="flex-grow mb-6">
-            <p className="text-amber-600 font-black text-xs mb-3 tracking-widest uppercase">
+          <div className="flex-grow mb-4 sm:mb-6">
+            <p className="text-amber-600 font-black text-xs mb-2 sm:mb-3 tracking-widest uppercase">
               Premium Amenities
             </p>
             <div className="grid grid-cols-3 gap-2">

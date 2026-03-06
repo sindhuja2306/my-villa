@@ -9,11 +9,11 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center pt-24 overflow-hidden bg-white">
+    <section className="relative w-full min-h-screen flex items-center justify-center pt-16 sm:pt-24 overflow-hidden bg-white">
       {/* Premium Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://static.vecteezy.com/system/resources/previews/060/508/214/large_2x/modern-villa-with-a-pool-surrounded-by-lush-greenery-and-a-clear-blue-sky-photo.jpeg"
+          src="https://static.vecteezy.com/system/resources/previews/035/778/147/non_2x/ai-generated-a-house-with-a-backyard-pool-and-a-palm-tree-free-photo.jpg"
           alt="Mountain Villa"
           className="w-full h-full object-cover"
         />
@@ -42,52 +42,52 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-6xl md:text-8xl font-black text-slate-900 mb-8 leading-tight">
-            DISCOVER YOUR
+          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-4 sm:mb-6 md:mb-8 leading-tight">
+            <span className="text-slate-900 drop-shadow-md">DISCOVER YOUR</span>
             <br />
-            <span className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent drop-shadow-sm">
+            <span className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent drop-shadow-2xl">
               ROYAL VILLA
             </span>
           </h1>
 
           {/* Premium Tagline */}
-          <p className="text-xl md:text-2xl text-slate-700 mb-12 max-w-3xl mx-auto font-light tracking-wide leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-800 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto font-semibold tracking-wide leading-relaxed drop-shadow-sm">
             Elevate Your Lifestyle With Exquisite Luxury Villas Nestled in the
             Finest Natural Settings
           </p>
 
           {/* Premium CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center mb-8 sm:mb-12">
             <Link
               to="/#villas"
-              className="group px-12 py-5 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-white font-black text-lg rounded-lg hover:shadow-xl hover:shadow-amber-300 transition-all transform hover:scale-105 tracking-wide uppercase"
+              className="group px-6 sm:px-12 py-3 sm:py-5 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-white font-black text-sm sm:text-lg rounded-lg hover:shadow-xl hover:shadow-amber-300 transition-all transform hover:scale-105 active:scale-95 tracking-wide uppercase w-full sm:w-auto"
             >
               EXPLORE VILLAS
-              <span className="ml-3 group-hover:translate-x-1 transition-transform inline-block">
+              <span className="ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform inline-block">
                 →
               </span>
             </Link>
 
             <a
-              href="#contact"
-              className="group px-12 py-5 bg-white/70 border-2 border-amber-500 text-amber-700 font-black text-lg rounded-lg hover:bg-amber-50 transition-all transform hover:scale-105 backdrop-blur tracking-wide uppercase"
+              href="tel:+919876543210"
+              className="group px-6 sm:px-12 py-3 sm:py-5 bg-white/70 border-2 border-amber-500 text-amber-700 font-black text-sm sm:text-lg rounded-lg hover:bg-amber-50 transition-all transform hover:scale-105 active:scale-95 backdrop-blur tracking-wide uppercase w-full sm:w-auto"
             >
-              📞 CONTACT US
+              📞 CALL NOW
             </a>
           </div>
 
           {/* Luxury Features */}
-          <div className="grid grid-cols-3 gap-6 mt-16 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 mt-12 sm:mt-16 max-w-2xl mx-auto">
             {[
-              { icon: "🏰", text: "Premium Villas" },
+              { icon: "🏡", text: "Premium Villas" },
               { icon: "⭐", text: "5-Star Rated" },
               { icon: "🌿", text: "Eco Luxury" },
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="bg-white/80 backdrop-blur-md border border-amber-200 p-4 rounded-lg hover:bg-white transition-all shadow-sm"
+                className="bg-white/80 backdrop-blur-md border border-amber-200 p-3 sm:p-4 rounded-lg hover:bg-white transition-all shadow-sm"
               >
-                <div className="text-3xl mb-2">{feature.icon}</div>
+                <div className="text-2xl sm:text-3xl mb-1 sm:mb-2">{feature.icon}</div>
                 <p className="text-amber-700 font-bold text-xs tracking-widest uppercase">
                   {feature.text}
                 </p>
