@@ -1,0 +1,54 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22C55E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#15803D;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ADE80;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16A34A;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="128" cy="128" r="120" fill="#F0FDF4" stroke="url(#emeraldGrad)" stroke-width="2"/>
+  
+  <!-- Mountain Peaks - Left -->
+  <path d="M 40 160 L 80 80 L 120 160 Z" fill="url(#mountainGrad)" filter="url(#glow)"/>
+  
+  <!-- Mountain Peaks - Center (Tallest) -->
+  <path d="M 90 160 L 128 50 L 166 160 Z" fill="url(#emeraldGrad)" filter="url(#glow)"/>
+  
+  <!-- Mountain Peaks - Right -->
+  <path d="M 136 160 L 176 80 L 216 160 Z" fill="url(#mountainGrad)" filter="url(#glow)"/>
+  
+  <!-- Villa House on Mountain -->
+  <g transform="translate(90, 100)">
+    <!-- House base -->
+    <rect x="10" y="30" width="40" height="35" fill="#DCFCE7" stroke="url(#emeraldGrad)" stroke-width="1.5"/>
+    
+    <!-- Roof -->
+    <path d="M 10 30 L 30 10 L 50 30 Z" fill="url(#emeraldGrad)" stroke="url(#emeraldGrad)" stroke-width="1.5"/>
+    
+    <!-- Door -->
+    <rect x="22" y="45" width="10" height="20" fill="url(#emeraldGrad)"/>
+    
+    <!-- Windows -->
+    <rect x="12" y="35" width="7" height="7" fill="#87CEEB"/>
+    <rect x="41" y="35" width="7" height="7" fill="#87CEEB"/>
+  </g>
+  
+  <!-- Decorative circles for depth -->
+  <circle cx="60" cy="140" r="3" fill="url(#emeraldGrad)" opacity="0.6"/>
+  <circle cx="196" cy="145" r="3" fill="url(#mountainGrad)" opacity="0.6"/>
+  
+  <!-- Text would go here in actual implementation -->
+  <!-- But as SVG, we'll let React add the text -->
+</svg>
